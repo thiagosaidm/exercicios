@@ -51,3 +51,31 @@ function personagemMorreu(dano, saude) {
 
 
 personagemMorreu(10,100)
+
+//
+
+
+function limitaPosicao(posicao){
+    if (posicao > 100 && posicao < 0) {
+        console.log(saiu)
+    } else {
+        console.log("está dentro")
+    }
+}
+
+///
+
+
+
+
+function MostrarTabuada(numero) {
+    let tabuada = [];
+    for (let i = 0; i < 10; i++) {
+        tabuada.push(`${numero} x ${i} =  ` + numero * i);
+        
+    }
+
+    console.log(tabuada)
+}
+
+MostrarTabuada(parseInt(window.prompt("digita ai um numero")))
