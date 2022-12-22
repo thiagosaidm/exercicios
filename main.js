@@ -238,24 +238,24 @@ function contarVogais(str) {
   ehPalindromo("appa");
 
 
-  /*
+/*
 
-Escreva uma função que calcule o fatorial de um número. 
-O fatorial de um número n é o produto de todos os números inteiros menores ou iguais a n. 
-Por exemplo, o fatorial de 5 é 5 * 4 * 3 * 2 * 1 = 120.
+Escreva uma função que receba um array de números como argumento e 
+retorne o maior número presente no array.
 
-pegar o numero e diminuir ele, colocando 
+*/
 
-  */
+function maiorNumero(numeros) {
+    let maior = numeros[0];
 
-function calcularFatorial(num) {
-    if (num) {
-        
-    } else {
-        
-    }
+    for (let i = 1; i < numeros.length; i++) {
+        if(numeros[i] > maior){
+            maior = numeros[i]
+        }
         
     }
+
+    return maior
 }
 
-console.log(calcularFatorial(5))
+console.log(maiorNumero([10,20,50,4,3]))
