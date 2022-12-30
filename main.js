@@ -273,18 +273,18 @@ Um número primo é um número divisível apenas por 1 e por ele mesmo.
 */
 
 function ehPrimo(number) {
-   if (number === 1) {
-    return false;
-   }
-for (let divisor = 2; divisor < number; divisor++) {
-    if (number % divisor == 0) {
-      return false
-    } else {
-        return true
+    if (number === 1) {
+        return false;
     }
-        
+    for (let divisor = 2; divisor < number; divisor++) {
+        if (number % divisor == 0) {
+            return false
+        } else {
+            return true
+        }
+
     }
-   
+
 }
 
 
@@ -302,10 +302,10 @@ function mostrarNumerosImpares() {
     const numeros = [];
     for (let i = 1; i < 100; i++) {
         if (i % 2 !== 0) {
-        numeros.push(i);
-        
+            numeros.push(i);
+
+        }
     }
-}
     return numeros;
 }
 
@@ -319,7 +319,7 @@ Faça uma função que conte quantas vezes uma determinada letra aparece em uma 
 */
 
 function contarQuantasVezesAparece(string, letra) {
-    
+
     /// SEPARAR A STRING EM UM ARRAY
     let palavraSep = string.split('')
     console.log(palavraSep)
@@ -334,7 +334,43 @@ function contarQuantasVezesAparece(string, letra) {
 }
 
 
-console.log(contarQuantasVezesAparece("rapadura","a"))
+console.log(contarQuantasVezesAparece("rapadura", "a"))
 
 
+/*
 
+Faça uma função que retorne uma lista de números de 1 a 100, onde
+cada número é substituído por "fizz" se for divisível por 3,
+"buzz" se for divisível por 5 e 
+"fizzbuzz" se for divisível por ambos.
+
+
+*/
+
+
+function fizzBuzz() {
+
+    ///declaro um array onde irão os resultados
+    const fizzBuzz = [];
+    /// faço um loop para pegar as iterações de 1 à 100
+    for (let i = 1; i < 100; i++) {
+    /// faço uma condicional, que a cada verificação inclui o item no array FIZZBUZZ
+    if (i % 3 === 0 && i % 5 === 0) {
+        fizzBuzz.push("FizzBuzz"); //notei que é importante o uso do ; para po código poder funcuinar no caso de condicional
+    } else if (i % 3 === 0){ // toda vez que o i for divisível por 3 o sistema chama o método push e "empurra" O Fizz para o array
+            fizzBuzz.push("Fizz");
+    }else if(i % 5 === 0){ /// toda vez que o i for divisivel por 5 o sistema chama o método push e "empurra" o Buzz para dentro do array
+        fizzBuzz.push("Buzz");
+    }else{ /// caso não seja divisível ai mostra apenas o numero, pq o programa não pediu para fazer algo com os numeros que não são divisiveis pelos citados;
+        fizzBuzz.push(i)
+    }
+        
+    }
+
+    ///retorno o array para poder mostrar o resultado
+    return fizzBuzz
+
+}
+
+
+console.log(fizzBuzz())
