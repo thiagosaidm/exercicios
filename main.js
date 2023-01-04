@@ -374,3 +374,28 @@ function fizzBuzz() {
 
 
 console.log(fizzBuzz())
+
+
+
+function joKenPo(jogador1, jogador2) {
+    console.log("Digite pedra, papel ou tesoura")
+    
+    if (jogador1 === jogador2) {
+        return "empate"
+    }
+ 
+    if (
+        (jogador1 === 'pedra' && jogador2 === 'tesoura')||
+        (jogador1 ==='tesoura' && jogador2 === 'papel')||
+        (jogador1 === 'papel' && jogador2 === 'pedra')
+        ) {
+            return 'jogador 1 venceu'
+    }
+        return 'jogador 2 venceu'
+     
+
+}
+console.log(joKenPo('tesoura','papel'))
+
+
+
