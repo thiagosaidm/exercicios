@@ -377,6 +377,9 @@ console.log(fizzBuzz())
 
 
 
+
+
+
 function joKenPo(jogador1, jogador2) {
     console.log("Digite pedra, papel ou tesoura")
     
